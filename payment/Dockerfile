@@ -13,8 +13,8 @@ COPY --from=builder /opt/server /opt/server
 RUN apk add --no-cache python3-dev build-base linux-headers pcre-dev
 RUN pip3 install -r requirements.txt
 #USER roboshop
-#CMD ["uwsgi", "--ini", "payment.ini"]
-CMD ["sleep", "1000"]
+CMD ["uwsgi", "--ini", "payment.ini"]
+#CMD ["sleep", "1000"]
 
 # FROM python:3.9
 # EXPOSE 8080
